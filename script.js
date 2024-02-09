@@ -1,6 +1,7 @@
 let ans = document.getElementById("Answer");
 let ques = document.getElementById("questiontext");
 let button = document.getElementById("button1");
+button.onclick = function(){
 let random =  Math.floor(Math.random()*101);
 let n;
 let i=1;
@@ -18,3 +19,4 @@ do{
 }while(n!=random);
 alert("Congratulation! You Guessed it correctly , Your score is " + (100-i));  
 console.log("Congratulation! You Guessed it correctly in " + i + " times.");  
+}
