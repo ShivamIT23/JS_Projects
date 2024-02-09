@@ -3,28 +3,39 @@ let ques = document.getElementById("questiontext");
 let button = document.getElementById("button1");
 let form = document.getElementById("Guess");
 let check = document.getElementById("button2");
+let papa = document.getElementById("answer2");
 let i=1;
+let n=0;
 let random =  Math.floor(Math.random()*101);
 function gamers(){
     form.hidden =false;
+    form.value="0";
     check.hidden = false;
+    papa.hidden = true;
     ques.innerHTML = `Guess the number ---->`;
-
- 
+    
     }
         
-function checkTheNumber(n){
-    if(n<random){
+check.onclick = function fn1(){
+    n=form.value;
+    n=Number.parseInt(n);
+        if(n<random){
         ques.innerHTML =`${n} is Wrong. \n Go higher! , You can do it.`;
+        i++;
     }
     else if(n>random){
         ques.innerHTML =`${n} is Wrong. \n Go Lower , You can do it.`;
+        i++;
     }
-    else {
+    else if(n==random){
         form.hidden = true;
         check.hidden = true;
-        ques.innerHTML = `${n} is Right. Congratulation! You Guessed it correctly , Your score is  + ${100-i}`
-        ans.innerHTML = `Congratulation! You Guessed it correctly in ${i} times.`
+        papa.hidden = false;
+        ques.innerHTML = `<b>${n}</b> is Right. Congratulation! You Guessed it correctly , Your score is  + ${100-i}`
+        papa.innerHTML = `Congratulation! You Guessed it correctly in <b>${i}</b> times.`
+    }
+    else {
+        ques.innerHTML = `${n} You entered non-number value.`
     }
 }
 button.addEventListener("click",gamers);
