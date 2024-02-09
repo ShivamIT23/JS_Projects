@@ -3,24 +3,28 @@ let ques = document.getElementById("questiontext");
 let button = document.getElementById("button1");
 let form = document.getElementById("Guess");
 let check = document.getElementById("button2");
-function gamers(){
-let random =  Math.floor(Math.random()*101);
-let n;
 let i=1;
-form.hidden =false;
-check.hidden = false;
-ques.innerHTML = `Guess the number ---->`;
-//   do{
-//   if(n<random){
-//     alert("Go higher! , You can do it");
-//     i++;
-//   }
-//   else if(n>random){
-//     alert("Go Lower , You can do it");
-//     i++;
-//   }
-// }while(n!=random);
-// alert("Congratulation! You Guessed it correctly , Your score is " + (100-i));  
-// console.log("Congratulation! You Guessed it correctly in " + i + " times.");  
+let random =  Math.floor(Math.random()*101);
+function gamers(){
+    form.hidden =false;
+    check.hidden = false;
+    ques.innerHTML = `Guess the number ---->`;
+
+ 
+    }
+        
+function checkTheNumber(n){
+    if(n<random){
+        ques.innerHTML =`${n} is Wrong. \n Go higher! , You can do it.`;
+    }
+    else if(n>random){
+        ques.innerHTML =`${n} is Wrong. \n Go Lower , You can do it.`;
+    }
+    else {
+        form.hidden = true;
+        check.hidden = true;
+        ques.innerHTML = `${n} is Right. Congratulation! You Guessed it correctly , Your score is  + ${100-i}`
+        ans.innerHTML = `Congratulation! You Guessed it correctly in ${i} times.`
+    }
 }
 button.addEventListener("click",gamers);
