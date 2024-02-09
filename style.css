@@ -42,6 +42,8 @@ H3{
     border: 5px solid #4a4b2f;
     color: #D4DF9E;
     font-size: 40px;
+    display: flex;
+    justify-content: space-between;
 }
 
 #Question{
@@ -58,7 +60,7 @@ H3{
     font-size: 40px;
 }
 
-.start{
+.start ,#button2{
     align-self: flex-end;
 }
 
@@ -68,9 +70,19 @@ button{
     border: 1px solid aquamarine;
     background-color: black;
     color: aliceblue;
-    transition: all 0.2s steps(20) 0s;
+    transition: all 0.1s steps(20) 0s;
 }
 
 button:active{
-    transform: scale(2);
+    transform: scale(1.5);
+}
+
+#Guess{
+    align-self: center;
+    margin-left: 30px;
+    min-height: 39px;
+    max-height: 40px;
+    border: none;
+    background-color: cadetblue;
+    text-align: center;
 }

@@ -5,9 +5,9 @@ button.onclick = function(){
 let random =  Math.floor(Math.random()*101);
 let n;
 let i=1;
-do{
-  n = prompt("Guess the number");
-  n = Number.parseInt(n);
+
+ques.innerHTML = "Guess the number &rarr";
+  do{
   if(n<random){
     alert("Go higher! , You can do it");
     i++;
