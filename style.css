@@ -8,9 +8,39 @@
     min-height: 20dvh;
     background-color: #30321C;
     padding: 30px;
-    font-size: 60px;
+    font-size: 300%;
     text-align: center;
     color: white;
+}
+
+@media (max-width:450px){
+    .heading{
+        font-size: 250%;
+    }
+}
+
+@media (min-width:1200px){
+    .heading{
+        font-size: 320%;
+    }
+}
+
+@media (min-width:1300px){
+    .heading{
+        font-size: 340%;
+    }
+}
+
+@media (min-width:1400px){
+    .heading{
+        font-size: 360%;
+    }
+}
+
+@media (min-width:1500px){
+    .heading{
+        font-size: 380%;
+    }
 }
 
 H3{
@@ -43,6 +73,7 @@ H3{
     color: #D4DF9E;
     font-size: 40px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -66,7 +97,7 @@ H3{
 
 button{
     padding: 6px;
-    font-size: 30px;
+    font-size: 85%;
     border: 1px solid aquamarine;
     background-color: black;
     color: aliceblue;
@@ -79,10 +110,29 @@ button:active{
 
 #Guess{
     align-self: center;
-    margin-left: 30px;
-    min-height: 39px;
-    max-height: 40px;
+    width: 60%;
+    max-width: 200px;
+    margin-left: 1vw;
+    min-height: 2vh;
+    max-height: 5vh;
     border: none;
     background-color: cadetblue;
     text-align: center;
+}
+
+#questiontext{
+    font-size: 85%;
+}
+
+#button1 , #button2{
+    font-size: 60%;
+}
+
+@media (max-width:520px){
+    #questiontext {
+        font-size: 70%;
+    }
+    #button1, #button2{
+        font-size: 50%;
+    }
 }

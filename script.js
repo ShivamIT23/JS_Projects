@@ -15,8 +15,7 @@ function gamers(){
     ques.innerHTML = `Guess the number ---->`;
     
     }
-        
-check.onclick = function fn1(){
+function fn1(){
     n=form.value;
     n=Number.parseInt(n);
         if(n<random){
@@ -38,4 +37,11 @@ check.onclick = function fn1(){
         ques.innerHTML = `${n} You entered non-number value.`
     }
 }
+
 button.addEventListener("click",gamers);
+check.addEventListener("click",fn1);
+form.keyup((e)=>{
+    if(e.keyCode === 13){
+        fn1();
+    }
+})
