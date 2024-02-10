@@ -6,14 +6,15 @@ let check = document.getElementById("button2");
 let papa = document.getElementById("answer2");
 let i=1;
 let n=0;
-let random =  Math.floor(Math.random()*101);
+var random =  Math.floor(Math.random()*101);
+console.log(random);
 function gamers(){
     form.hidden =false;
     form.value="0";
     check.hidden = false;
     papa.hidden = true;
+    button.hidden = true;
     ques.innerHTML = `Guess the number ---->`;
-    
     }
 function fn1(){
     n=form.value;
@@ -30,6 +31,7 @@ function fn1(){
         form.hidden = true;
         check.hidden = true;
         papa.hidden = false;
+        ques.style.fontSize = "4.4vw";
         ques.innerHTML = `<b>${n}</b> is Right. Congratulation! You Guessed it correctly , Your score is  + ${100-i}`
         papa.innerHTML = `Congratulation! You Guessed it correctly in <b>${i}</b> times.`
     }
@@ -40,8 +42,8 @@ function fn1(){
 
 button.addEventListener("click",gamers);
 check.addEventListener("click",fn1);
-form.keyup((e)=>{
-    if(e.keyCode === 13){
-        fn1();
-    }
-})
+// form.keyup((e)=>{
+//     if(e.keyCode === 13){
+//         fn1();
+//     }
+// })

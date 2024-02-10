@@ -135,4 +135,7 @@ button:active{
     #button1, #button2{
         font-size: 50%;
     }
+    #answer2{
+        font-size: 4.4vw;
+    }
 }
