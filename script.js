@@ -14,7 +14,7 @@ function gamers(){
     check.hidden = false;
     papa.hidden = true;
     button.hidden = true;
-    ques.innerHTML = `Guess the number ---->`;
+    ques.innerHTML = `Guess the number (1-100)---->`;
     }
 function fn1(){
     n=form.value;
