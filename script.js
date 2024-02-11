@@ -31,7 +31,7 @@ function fn1(){
         form.hidden = true;
         check.hidden = true;
         papa.hidden = false;
-        ques.style.fontSize = "4.4vw";
+        // ques.style.fontSize = "1.3rem";
         ques.innerHTML = `<b>${n}</b> is Right. Congratulation! You Guessed it correctly , Your score is  + ${100-i}`
         papa.innerHTML = `Congratulation! You Guessed it correctly in <b>${i}</b> times.`
     }
