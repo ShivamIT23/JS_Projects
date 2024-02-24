@@ -19,6 +19,18 @@
     }
 }
 
+@media (max-width:340px){
+    .heading{
+        font-size: 150%;
+    }
+}
+
+@media (max-width:240px){
+    .heading{
+        font-size: 100%;
+    }
+}
+
 @media (min-width:1200px){
     .heading{
         font-size: 320%;
@@ -64,9 +76,11 @@ H3{
 
 #Answer{
     height: 20vh;
+    height: 20dvh;
     min-height: 80px;
     width: 40vw;
-    min-width: 40dvw;
+    width: 40dvw;
+    min-width: 300px;
     padding: 8px;
     background-color: #6B654B;
     border: 5px solid #4a4b2f;
@@ -77,11 +91,17 @@ H3{
     justify-content: space-between;
 }
 
+.answer2{
+    font-size: 80%
+}
+
 #Question{
     height: 20vh;
+    height: 20dvh;
     min-height: 80px;
     width: 40vw;
-    min-width: 40dvw;
+    width: 40dvw;
+    min-width: 300px;
     padding: 8px;
     background-color: #6B654B;
     border: 5px double #4a4b2f;
@@ -89,6 +109,16 @@ H3{
     display: flex;
     justify-content: space-between;
     font-size: 40px;
+}
+
+@media(max-width:400px){
+    #Question , #Answer{
+        min-width: fit-content;
+        font-size: xx-large;
+    }
+    p{
+        font-size: 20px;
+    }
 }
 
 .start ,#button2{
@@ -121,7 +151,7 @@ button:active{
 }
 
 #questiontext{
-    font-size: 85%;
+    font-size: 82%;
 }
 
 #button1 , #button2{
@@ -129,13 +159,16 @@ button:active{
 }
 
 @media (max-width:820px){
-    #questiontext {
-        font-size: 4vw;
-    }
     #button1, #button2{
         font-size: 50%;
     }
     #answer2{
-        font-size: 4.4vw;
+        font-size: 70%;
+    }
+}
+
+@media (max-width: 650px){
+    .container{
+        flex-wrap: wrap;
     }
 }

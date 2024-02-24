@@ -4,7 +4,7 @@ let button = document.getElementById("button1");
 let form = document.getElementById("Guess");
 let check = document.getElementById("button2");
 let papa = document.getElementById("answer2");
-let i=1;
+let i=0;
 let n=0;
 var random =  Math.floor(Math.random()*101);
 console.log(random);
@@ -13,13 +13,12 @@ function gamers(){
     form.value="0";
     check.hidden = false;
     papa.hidden = true;
-    button.hidden = true;
     ques.innerHTML = `Guess the number (1-100)---->`;
-    }
+}
 function fn1(){
     n=form.value;
     n=Number.parseInt(n);
-        if(n<random){
+    if(n<random){
         ques.innerHTML =`${n} is Wrong. \n Go higher! , You can do it.`;
         i++;
     }
@@ -31,9 +30,11 @@ function fn1(){
         form.hidden = true;
         check.hidden = true;
         papa.hidden = false;
+        button.hidden = true;
+
         // ques.style.fontSize = "1.3rem";
-        ques.innerHTML = `<b>${n}</b> is Right. Congratulation! You Guessed it correctly , Your score is  + ${100-i}`
-        papa.innerHTML = `Congratulation! You Guessed it correctly in <b>${i}</b> times.`
+        ques.innerHTML = `<b>${n}</b> is Right. Congratulation! You Guessed it correctly , Your score is : ${100-i}`
+        papa.innerHTML = `Congratulation! You Guessed it correctly in <b>${i+1}</b> times.`
     }
     else {
         ques.innerHTML = `${n} You entered non-number value.`
