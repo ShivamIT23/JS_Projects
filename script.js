@@ -43,6 +43,11 @@ function fn1(){
 
 button.addEventListener("click",gamers);
 check.addEventListener("click",fn1);
+form.addEventListener('keydown',(e)=>{
+    if(e.key=="Enter"){
+        fn1();
+    }
+})
 // form.keyup((e)=>{
 //     if(e.keyCode === 13){
 //         fn1();
