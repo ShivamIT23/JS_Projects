@@ -44,7 +44,7 @@ function fn1(){
 button.addEventListener("click",gamers);
 check.addEventListener("click",fn1);
 form.addEventListener('keydown',(e)=>{
-    if(e.key=="Enter"){
+    if(e.code=="Enter"){
         fn1();
     }
 })
